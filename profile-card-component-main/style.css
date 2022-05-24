@@ -6,7 +6,9 @@
 }
 
 body {
-  background: hsl(185, 75%, 39%);
+  background: url(./images/bg-pattern-top.svg) top -350px left -100px no-repeat,
+    url(./images/bg-pattern-bottom.svg) bottom -300px right -100px no-repeat;
+  background-color: hsl(185, 75%, 39%);
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -14,10 +16,10 @@ body {
   height: 100vh;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 18px;
-  background-image: url('images/bg-pattern-bottom.svg');
-  background-repeat: repeat;
+  background-size: 50%, 50%;
+  /* background-repeat: repeat;
   background-size: 600px;
-  background-position: -60% 900%;
+  background-position: -60% 900%; */
 }
 
 h2 {
@@ -78,8 +80,9 @@ h2 {
   letter-spacing: 2px;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 767px) {
   body {
+    background-position: -60% 900%;
     font-size: 12px;
   }
 
@@ -99,6 +102,7 @@ h2 {
   }
 
   .card_country {
+
     margin-top: 10px;
     padding-bottom: 20px;
   }
